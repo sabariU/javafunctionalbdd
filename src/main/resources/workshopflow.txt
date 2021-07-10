@@ -25,6 +25,17 @@ BDD Intro
     Integration/Acceptance testing, Unit Testing
     Cucumber & Junit
     ETL Engine design
+        extract - multiple systems pushing customer data to you
+        transform - convert the data as expected by target system
+        load - load to target which is billing system
+               load default
+               load sorted
+               load first n
+               load ad-hoc
+
+
+Data Set Exercise
+    Write datatable converter for your desired dataset in DataTableTransformer
 
 
 

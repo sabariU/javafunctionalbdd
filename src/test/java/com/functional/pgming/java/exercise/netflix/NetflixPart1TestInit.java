@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(plugin = {"pretty","html:target/cucumber"},
         features = {
-                "src/test/resources/cucumber/exercise/netflix/netflix_dashboard.feature"
+                "src/test/resources/features/datasetexercise/netflix/netflix_dashboard.feature"
                 })
 class NetflixPart1TestInit {
 
