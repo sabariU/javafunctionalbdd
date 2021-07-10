@@ -1,0 +1,36 @@
+Functional Interfaces java.util.function from Java8
+
+Consumer<T> Represents an operation that accepts a single input argument and returns no result.
+Function<T,R> Represents a function that accepts one argument and produces a result.
+    Method reference
+    Supplier<T>	Represents a supplier of results.
+        Constructor reference
+        Text Block, Higher order functions -> forEach, Builder
+
+BiFunction<T,U,R> Represents a function that accepts two arguments and produces a result.
+    Convert list to map
+    Apply group by rating
+
+BiConsumer<T,U> Represents an operation that accepts two input arguments and returns no result
+    Display map entries
+    Display only
+
+Streams API
+    https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html
+    iterator vs streams, Load test
+    intermediate and terminal operations
+
+BDD Intro
+    Agile scrum Product Team (PO, and members), Dev Team (Tech PO/Tech Lead and developers)
+    Integration/Acceptance testing, Unit Testing
+    Cucumber & Junit
+    ETL Engine design
+
+
+
+
+
+
+
+
+

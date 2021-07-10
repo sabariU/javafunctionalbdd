@@ -1,0 +1,16 @@
+2021-07-10 15:18:59.596 [main] INFO  com.functional.pgming.java.warmup.funcexrcisebdd.BillingEtlEngineUnitTestStepDefinitions - Expeected {
+    Id          : 103
+    Name        : test user3
+    Country     : Egypt
+    Membership  : Basic
+    Dob         : April 26,1976
+}
+
+2021-07-10 15:18:59.599 [main] INFO  com.functional.pgming.java.warmup.funcexrcisebdd.BillingEtlEngineUnitTestStepDefinitions - Actual {
+    Id          : 103
+    Name        : test user3
+    Country     : Egypt
+    Membership  : Basic
+    Dob         : April 26,1976
+}
+
