@@ -5,9 +5,6 @@ import java.util.function.Consumer;
 public class Ex1_Consumer {
 
 
-    private String name = "dfsdfsdfsd" ;
-
-
     public Consumer<String> printStringConsumerV5 = s -> System.out.println(s);
 
     public Consumer<String> printStringConsumerV4 = (s) -> {
