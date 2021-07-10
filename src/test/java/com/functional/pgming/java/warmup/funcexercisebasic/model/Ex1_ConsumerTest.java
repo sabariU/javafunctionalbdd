@@ -7,6 +7,8 @@ import org.junit.internal.runners.JUnit38ClassRunner;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.Consumer;
 
 @RunWith(JUnit4.class)
@@ -29,7 +31,10 @@ public class Ex1_ConsumerTest extends TestCase {
     @Test
     public void testPrintConsumerV2(){
         Consumer printStringConsumerV2 = ex1_consumer.printStringConsumerV2;
-        ex1_consumer.printStringConsumerV2.accept("lambda");
+        List<String> l = new ArrayList<String>();
+        l.add("blue");
+        l.add("green");
+        ex1_consumer.printStringConsumerV2.accept(l);
     }
 
 
