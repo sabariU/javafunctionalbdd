@@ -5,12 +5,54 @@ import com.functional.pgming.java.warmup.funcexrcisebdd.Customer;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Map;
+import java.util.function.BiFunction;
+import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
 public class Ex2_Function {
 
-    //Supplier<Book> bookSupplier = Book::new;
+
+    BiFunction<String, Map<String,Book>,Book> biFunctionLookupBook =
+            (key,bookMap) -> bookMap.get(key);
+
+//    BiFunction<String, Map<String,Book>,Book> biFunctionLookupBook =
+//            (key,bookMap) -> {
+//                    return bookMap.get(key);
+//            };
+
+    Consumer<Book> bookDisplayFormat1 = book -> {
+        var formatStyle=  String.format("""
+                    {
+                        Id: %s,
+                        Title: %s,
+                        Authors: %s,
+                        Avge Rating: %s,
+                        Isbn: %s
+                    }
+                """.formatted(book.getId(),book.getTitle(),book.getAuthors()
+                ,book.getAvgRating(),book.getIsbn()));
+        System.out.println(formatStyle);
+    };
+
+    Consumer<Book> bookDisplayFormat2 = book -> {
+        var formatStyle=  String.format("""
+                    {
+                        Id          :   %s,
+                        Title       :   %s,
+                        Authors     :   %s,
+                        Avge Rating :   %s,
+                        Isbn        :   %s
+                    }
+                """.formatted(book.getId(),book.getTitle(),book.getAuthors()
+                ,book.getAvgRating(),book.getIsbn()));
+        System.out.println(formatStyle);
+    };
+
+    public void higherOrderFunction(Book book,Consumer<Book> formatStyle){
+        formatStyle.accept(book);
+    }
 
     Function<String, Book> convertToBookUsingBuilder = bookStr ->{
 
@@ -18,12 +60,10 @@ public class Ex2_Function {
 
         var i = 0;
 
-        Book bookFromBuilder = Book.builder().id(colArr[i++]).
-                title(colArr[i++]).authors(colArr[i++])
+        Book bookFromBuilder = Book.builder().id(colArr[i++])
+                .title(colArr[i++])
+                .authors(colArr[i++])
                 .avgRating(colArr[i++]).isbn(colArr[i++]).build();
-
-        Book bookFromBuilder1 = Book.builder().id(colArr[i++]).
-                title(colArr[i++]).authors(colArr[i++]).build();
 
         return bookFromBuilder;
     };

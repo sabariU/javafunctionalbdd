@@ -42,6 +42,23 @@ public class Ex2_FunctionTest extends TestCase {
     }
 
 
+    @Test
+    public void testHigherOrderFunction() {
+
+        Function<String, Book> convertToBook = ex2_function.convertToBook;
+
+        var i = 0;
+        for (String bookStr : bookList) {
+            Book book = convertToBook.apply(bookStr);
+            if(++i % 2 == 0){
+                ex2_function.higherOrderFunction(book,
+                        ex2_function.bookDisplayFormat1);
+            }else{
+                ex2_function.higherOrderFunction(book,
+                        ex2_function.bookDisplayFormat2);
+            }
+        }
+    }
 
     @Test
     public void testConvertToBook() {
